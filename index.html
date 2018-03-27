@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Multi File Url Generator</title>
+  <style>
+    .container{
+      max-width: 500px;
+      margin: 20vh auto;
+    }
+
+    form div{
+      margin: 10px 0;
+    }
+
+    input[type='url']{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div>
+        <label for="batch">Enter URL to generate it's multiples</label>
+        <input type="url" name="batch" autofocus id="batch">
+      </div>
+
+      <div>
+        <label for="quantity">Enter No. of files</label>
+        <input type="number" name="quantity" id="quantity" max="10" min="1" value="1">
+      </div>
+
+      <div><button type="submit">Generate</button></div>
+
+    </form>
+  </div>
+</body>
+</html>
