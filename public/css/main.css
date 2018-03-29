@@ -1,0 +1,12 @@
+.container{
+  max-width: 500px;
+  margin: 20vh auto;
+}
+
+form div{
+  margin: 10px 0;
+}
+
+input[type='url']{
+  width: 100%;
+}
