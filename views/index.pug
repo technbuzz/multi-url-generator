@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Multi File Url Generator
+    link(rel='stylesheet', href='/css/main.css')
+  body
+    .container
+      form(action='/', method='POST')
+        div
+          label(for='batch') Enter URL to generate it's multiples
+          input#batch(type='url', required='true', name='batch', autofocus='')
+        div
+          label(for='quantity') Enter No. of files
+          input#quantity(type='number', name='quantity', max='10', min='1', value='1')
+        div
+          button(type='submit') Generate
