@@ -8,7 +8,7 @@ html(lang='en')
     link(rel='stylesheet', href='/css/main.css')
   body
     .container
-      form(action='/', method='POST')
+      form(name='myForm', action="/")
         div
           label(for='batch') Enter URL to generate it's multiples
           input#batch(type='url', required='true', name='batch', autofocus='')
@@ -17,3 +17,6 @@ html(lang='en')
           input#quantity(type='number', name='quantity', max='10', min='1', value='1')
         div
           button(type='submit') Generate
+  script(src="http://code.jquery.com/jquery-latest.js")
+  script(src="/js/main.js")
+  

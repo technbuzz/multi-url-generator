@@ -20,11 +20,10 @@ app.post('/generate', function(req, res) {
   fs.writeFile('download.txt', links, err => {
     if (err) throw err;
 
-    console.log('Lyrics Saved');
+    console.log('file Saved');
     res.render('download');
   });
 });
-
 
 
 app.get('/download', (req, res) => {
