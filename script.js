@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.post('/generate', function(req, res) {
+app.post('/', function(req, res) {
   let links = 'This is some dummy text';
   fs.writeFile('download.txt', links, err => {
     if (err) throw err;
