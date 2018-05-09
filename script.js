@@ -15,12 +15,20 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.post('/', function(req, res) {
-  let links = 'This is some dummy text';
+app.post('/generate', function(req, res) {
+  const files = Number(req.body.quantity);
+  const url = req.body.batch;
+
+  let links = '';
+  for (let i = 0; i < files; i++) {
+    links += `${url}/${i}\r\n`
+  }
+
   fs.writeFile('download.txt', links, err => {
     if (err) throw err;
 
     console.log('file Saved');
+    // app.route('/download')
     res.render('download');
   });
 });
