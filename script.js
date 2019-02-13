@@ -43,5 +43,5 @@ app.get('/download', (req, res) => {
     res.redirect('/')
   }
 });
-
-app.listen(3000, () => console.log('Example app listening on Port 3000!'));
+let port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Example app listening on ${port}`));
