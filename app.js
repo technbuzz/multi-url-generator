@@ -24,9 +24,8 @@ app.post('/generate', function(req, res) {
     links += `${url}/${i}\r\n`
   }
 
-  fs.writeFile('download.txt', links, err => {
+  fs.writeFile(`download.txt`, links, err => {
     if (err) throw err;
-
     console.log('file Saved');
     // app.route('/download')
     res.render('download');
@@ -35,13 +34,18 @@ app.post('/generate', function(req, res) {
 
 
 app.get('/download', (req, res) => {
+
   const file = `${__dirname}/download.txt`;
   if(fs.existsSync(file)){
     res.sendFile(`${__dirname}/download.txt`);
   } else {
     console.log('File doesnot exist, Kindly retry!');
-    res.redirect('/')
+    res.redirect('/');
   }
+
 });
+
+
+
 let port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Example app listening on ${port}`));

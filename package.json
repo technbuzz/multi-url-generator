@@ -2,7 +2,7 @@
   "name": "multi-url-generator",
   "version": "1.0.0",
   "description": "A personal project that creates list of urls",
-  "main": "script.js",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
@@ -12,8 +12,8 @@
     "nodemon": "^1.17.4"
   },
   "scripts": {
-    "start": "node script.js",
-    "dev": "nodemon script.js" 
+    "start": "node app.js",
+    "dev": "nodemon app.js" 
   },
   "repository": {
     "type": "git",

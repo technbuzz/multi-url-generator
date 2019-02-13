@@ -10,3 +10,10 @@ form div{
 input[type='url']{
   width: 100%;
 }
+
+section {
+  margin-top: 200px;
+  margin-top: 10vh;
+  border: 2px dashed;
+  padding: 1rem;
+}
