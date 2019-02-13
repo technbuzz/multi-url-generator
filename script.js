@@ -35,7 +35,13 @@ app.post('/generate', function(req, res) {
 
 
 app.get('/download', (req, res) => {
-  res.sendFile(`${__dirname}/download.txt`);
+  const file = `${__dirname}/download.txt`;
+  if(fs.existsSync(file)){
+    res.sendFile(`${__dirname}/download.txt`);
+  } else {
+    console.log('File doesnot exist, Kindly retry!');
+    res.redirect('/')
+  }
 });
 
 app.listen(3000, () => console.log('Example app listening on Port 3000!'));

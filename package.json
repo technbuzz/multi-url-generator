@@ -12,7 +12,8 @@
     "nodemon": "^1.17.4"
   },
   "scripts": {
-    "start": "nodemon script.js"
+    "start": "node script.js",
+    "dev": "nodemon script.js" 
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
     "url",
     "javascript"
   ],
-  "author": "Samiullah Khan <samiullah.khan.1989@gmail.com>",
+  "author": "(@technbuzz)Samiullah Khan <samiullah.khan.1989@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/technbuzz/multi-url-generator/issues"
